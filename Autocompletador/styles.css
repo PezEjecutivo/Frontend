@@ -1,0 +1,98 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #bb86fc;
+    margin-bottom: 1.5rem;
+}
+
+.autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#champion-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #333;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+#champion-input:focus {
+    outline: none;
+    border-color: #6200ee;
+}
+
+#autocomplete-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    position: absolute;
+    width: 100%;
+    background-color: #2c2c2c;
+    border: 2px solid #333;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none; /* Se oculta por defecto */
+}
+
+#autocomplete-list li {
+    padding: 0.75rem;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+#autocomplete-list li:hover,
+#autocomplete-list li.active {
+    background-color: #444;
+}
+
+#result-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 2px solid #333;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    opacity: 0; /* Se oculta por defecto */
+}
+
+#result-box.visible {
+    opacity: 1;
+}
+
+#result-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
