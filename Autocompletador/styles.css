@@ -58,7 +58,7 @@ h1 {
     max-height: 200px;
     overflow-y: auto;
     z-index: 10;
-    display: none; /* Se oculta por defecto */
+    display: none; 
 }
 
 #autocomplete-list li {
@@ -84,7 +84,7 @@ h1 {
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s;
-    opacity: 0; /* Se oculta por defecto */
+    opacity: 0; 
 }
 
 #result-box.visible {
